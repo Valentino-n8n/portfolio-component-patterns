@@ -1,11 +1,11 @@
 # Portfolio Component Patterns
 
-A reference for building a personal developer portfolio in Next.js 15 —
+A reference for building a personal developer portfolio in Next.js 15:
 without Framer Motion, without a UI library, without a CMS.
 
 This repository documents the reusable component and hook patterns
 behind [valentinoveljanovski.de](https://valentinoveljanovski.de). The
-portfolio is itself a public site — what's documented here is the **why**
+portfolio is itself a public site, what's documented here is the **why**
 behind specific implementation choices, plus the generic,
 copy-paste-ready versions of the components that aren't tied to my
 content.
@@ -24,16 +24,16 @@ A lot of "developer portfolio templates" lean hard on Framer Motion,
 shadcn/ui, and one of a dozen template repos. The portfolio this repo
 references deliberately does none of that. It uses:
 
-- **Custom IntersectionObserver hook** instead of Framer Motion —
+- **Custom IntersectionObserver hook** instead of Framer Motion:
   lighter bundle, no animation library dependency, full control over
   timing.
-- **Custom SVG architecture diagrams** instead of a charting library —
+- **Custom SVG architecture diagrams** instead of a charting library:
   every case study has a unique flow, generic chart components don't
   fit, drawing in SVG is faster than fighting a generic API.
-- **State-machine typewriter** instead of a typewriter library — it's
+- **State-machine typewriter** instead of a typewriter library, it's
   ~30 lines of TypeScript, supports cycling through multiple strings
   with typing/waiting/deleting phases.
-- **Consistent 9-section case study layout** instead of a CMS — each
+- **Consistent 9-section case study layout** instead of a CMS, each
   case study is a `.tsx` file that imports a small set of primitives.
   New case studies copy the structure; deviations are intentional.
 
@@ -70,7 +70,7 @@ content.
 
 - **Framework:** Next.js 15 (App Router)
 - **Language:** TypeScript
-- **Styling:** Inline CSS variables (no Tailwind, no CSS-in-JS library) —
+- **Styling:** Inline CSS variables (no Tailwind, no CSS-in-JS library):
   uses CSS custom properties on `:root` and `style={{...}}` props
 - **Animation:** Native IntersectionObserver + CSS transitions
 - **Hosting:** Vercel
@@ -108,15 +108,15 @@ is at
 
 Companion repositories cover related patterns:
 
-- [`Valentino-n8n/DISPO`](https://github.com/Valentino-n8n/DISPO) —
+- [`Valentino-Veljanovski/DISPO`](https://github.com/Valentino-Veljanovski/DISPO):
   Microsoft 365 + DocuSign + AI-assisted operations
-- [`Valentino-n8n/Reklamation`](https://github.com/Valentino-n8n/Reklamation) —
+- [`Valentino-Veljanovski/Reklamation`](https://github.com/Valentino-Veljanovski/Reklamation):
   Slack-based case management
-- [`Valentino-n8n/BauScope-Control-Center`](https://github.com/Valentino-n8n/BauScope-Control-Center) —
+- [`Valentino-Veljanovski/BauScope-Control-Center`](https://github.com/Valentino-Veljanovski/BauScope-Control-Center):
   Role-based Slack platform with DocuSign HMAC
-- [`Valentino-n8n/BauScope-3D`](https://github.com/Valentino-n8n/BauScope-3D) —
+- [`Valentino-Veljanovski/BauScope-3D`](https://github.com/Valentino-Veljanovski/BauScope-3D):
   Next.js B2B landing page patterns
-- [`Valentino-n8n/static-corporate-site-patterns`](https://github.com/Valentino-n8n/static-corporate-site-patterns) —
+- [`Valentino-Veljanovski/static-corporate-site-patterns`](https://github.com/Valentino-Veljanovski/static-corporate-site-patterns):
   PHP + Apache + service worker patterns
 
 ---
